@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: white;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px #38bdf8;
+  margin-top: 40px;
+  letter-spacing: 3px;
+}
+.rounds{
+   font-family: 'Orbitron', sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: #0f172a;
+  color: white;
+  font-size: 24px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-right: 20px;
+  cursor: pointer;
+   border: 2px solid transparent;
+  cursor: pointer;
+  transition: 0.3s;
+  border-color: #22d3ee;
+  box-shadow: 0 0 15px #22d3ee; 
+
+}
+.rounds:hover {
+  transform: scale(1.1);
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px;
+}
+
+.move-button {
+  background: #0f172a;
+  border-radius: 20px;
+  padding: 20px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.move-icon {
+  width: 60px;
+}
+
+/* colors */
+.rock { border-color: #22d3ee; box-shadow: 0 0 15px #22d3ee; }
+.paper { border-color: #e879f9; box-shadow: 0 0 15px #e879f9; }
+.scissors { border-color: #facc15; box-shadow: 0 0 15px #facc15; }
+
+.move-button:hover {
+  transform: scale(1.1);
+}
+.restart-icon {
+  width: 20px;
+
+}
+
+.result {
+  font-size: 24px;
+}
+
+/* animations */
+.win { animation: win 0.5s; }
+.lose { animation: shake 0.4s; }
+.draw { animation: fade 0.5s; }
+
+@keyframes win {
+  0% { color: white; }
+  50% { color: #22c55e; }
+  100% { color: white; }
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes fade {
+  50% { opacity: 0.5; }
+}
+
+/* end screen */
+.trophy {
+  width: 100px;
+  margin: 10px;
+}
+
+.restart-btn {
+   font-family: 'Orbitron', sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: auto;
+  padding: 10px 20px;
+  background: #38bdf8;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 15px #22d3ee; 
+}
+.restart-btn:hover {
+  background: #22d3ee;
+   transform: scale(1.1);
+}
+
+.restart-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.hidden {
+  display: none;
+}
+.emoji {
+  font-size: 35px;
+  margin-right: 10px;
+}
+
+/* responsive */
+@media (max-width: 600px) {
+  .buttons {
+    flex-direction: column;
+  }
+}
