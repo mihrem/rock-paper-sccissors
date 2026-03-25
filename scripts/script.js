@@ -102,6 +102,7 @@ function pickComputerMove() {
 function endGame() {
   document.querySelector('.game-area').classList.add('hidden');
   document.querySelector('.end-screen').classList.remove('hidden');
+  document.getElementById('main-title').classList.add('hidden');
 
   const trophy = document.querySelector('.trophy');
 
